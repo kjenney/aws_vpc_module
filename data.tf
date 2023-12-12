@@ -14,7 +14,7 @@ data "aws_vpc_ipam_preview_next_cidr" "previewed_cidr" {
 data "aws_ec2_transit_gateway" "my_tgw" {
   filter {
     name   = "tag:Name"
-    values = [var.transit_gateway_description]
+    values = [var.transit_gateway_name]
   }
 }
 
