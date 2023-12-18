@@ -15,7 +15,3 @@ data "aws_ec2_transit_gateway" "my_tgw" {
 data "aws_availability_zones" "available" {
   state = "available"
 }
-
-data "aws_vpc" "main" {
-  id = aws_vpc.my_vpc.vpc_id
-}
