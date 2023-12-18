@@ -1,5 +1,5 @@
 locals {
-  cidr              = data.aws_vpc.main.cidr_block
+  cidr              = aws_vpc.my_vpc.cidr_block
   zones             = 2
   private_newbits   = 2
   public_newbits    = 3
