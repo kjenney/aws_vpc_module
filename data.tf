@@ -17,5 +17,5 @@ data "aws_availability_zones" "available" {
 }
 
 data "aws_vpc" "main" {
-  id = module.vpc_cidr_from_ipam.vpc_id
+  id = aws_vpc.my_vpc.vpc_id
 }
