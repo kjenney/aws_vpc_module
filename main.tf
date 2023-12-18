@@ -1,6 +1,6 @@
 resource "aws_vpc" "my_vpc" {
   ipv4_ipam_pool_id   = data.aws_vpc_ipam_pool.my_pool.id
-  cidr_block          = data.aws_vpc_ipam_preview_next_cidr.previewed_cidr.cidr
+  ipv4_netmask_length = 22
 
   enable_dns_hostnames = true
 
