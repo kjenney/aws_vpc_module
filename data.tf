@@ -5,12 +5,6 @@ data "aws_vpc_ipam_pool" "my_pool" {
   }
 }
 
-data "aws_vpc_ipam_preview_next_cidr" "previewed_cidr" {
-  ipam_pool_id    = data.aws_vpc_ipam_pool.my_pool.id
-  netmask_length  = 22
-}
-
-
 data "aws_ec2_transit_gateway" "my_tgw" {
   filter {
     name   = "tag:Name"
