@@ -1,5 +1,5 @@
 locals {
-  cidr              = data.aws_vpc_ipam_preview_next_cidr.previewed_cidr.cidr
+  cidr              = data.aws_vpc.main.cidr_block
   zones             = 2
   private_newbits   = 2
   public_newbits    = 3
